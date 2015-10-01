@@ -1695,8 +1695,7 @@ static PNG_CONST char *inname = "pngtest.png";
 static PNG_CONST char *outname = "pngout.png";
 #endif
 
-int
-main(int argc, char *argv[])
+int libpng_test(int argc, char *argv[])
 {
    int multiple = 0;
    int ierror = 0;
@@ -1798,7 +1797,7 @@ main(int argc, char *argv[])
        "  reads/writes one PNG file (without -m) or multiple files (-m)\n");
      fprintf(STDERR,
        "  with -m %s is used as a temporary file\n", outname);
-     exit(1);
+     return 1;
    }
 
    if (multiple != 0)
@@ -2014,7 +2013,7 @@ main(int argc, char *argv[])
          (unsigned long) png_get_chunk_malloc_max(dummy_ptr));
    png_destroy_read_struct(&dummy_ptr, NULL, NULL);
 
-   return (int)(ierror != 0);
+   return 0;
 }
 #else
 int

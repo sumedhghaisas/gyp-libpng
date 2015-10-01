@@ -50,7 +50,7 @@ module.exports = function(grunt) {
                 // configuration for test files.
                 test: {
                     src: [
-                        'jpeg_test.js'
+                        'libpng_test.js'
                     ],
                     options: {
                         predef: [
@@ -97,7 +97,7 @@ module.exports = function(grunt) {
                         reporter: 'spec'
                     },
                     src: [
-                        'jpeg_test.js'
+                        'libpng_test.js'
                     ]
                 }
             },

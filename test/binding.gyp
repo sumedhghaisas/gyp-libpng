@@ -7,6 +7,7 @@
       ],
       'sources': [
         'pngtest.c',
+		'pngtest_wrapper.cpp',
       ],
       "include_dirs": [
         "../libpng",
